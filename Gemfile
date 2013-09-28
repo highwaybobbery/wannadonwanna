@@ -20,7 +20,7 @@ group :test do
   gem 'minitest-rails-capybara'
   gem 'pry-rescue'
   gem 'minitest-colorize'
-#  gem 'minitest-focus'
+  gem 'minitest-focus'
 end
 
 # Use ActiveModel has_secure_password
