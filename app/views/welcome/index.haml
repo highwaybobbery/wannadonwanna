@@ -1,10 +1,13 @@
-Hi, my name is:
-%input.name
-, and I
-%select.severity
-  %option kinda
-  %option really
-  %option really really
-%select.attitude
-  %option wanna
-  %option donwanna
+%form{ action: whatsits_path, method: :post }
+  Hi, my name is:
+  %input.name#name{ name: 'whosey[name]' }
+  , and I
+  %select.severity#severity{ name: 'whatsit[severity]' }
+    %option kinda
+    %option really
+    %option really really
+  %select.attitude#attitude{ name: 'whatsit[attitude]' }
+    %option wanna
+    %option donwanna
+  %input.stuff#stuff{ name: 'whatsit[stuff]' }
+  %input{ type: 'submit', value: 'Post' }

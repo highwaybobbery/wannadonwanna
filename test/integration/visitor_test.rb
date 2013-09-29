@@ -1,4 +1,5 @@
 require 'test_helper'
+
 class VisitorExperience < ActionDispatch::IntegrationTest
   before { visit root_path }
   describe "Visitor to homepage" do
@@ -45,6 +46,11 @@ class VisitorExperience < ActionDispatch::IntegrationTest
           end
         end
       end
+
+      it 'has a stuff input' do
+        assert page.has_css?('input.stuff')
+      end
+
     end
   end
 end
